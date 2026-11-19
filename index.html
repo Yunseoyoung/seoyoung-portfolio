@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="윤서영의 취업용 포트폴리오와 프로젝트 커뮤니티">
+  <title>윤서영 | 포트폴리오</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="top"><div class="wrap bar">
+    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">SY</span> 윤서영</a>
+    <nav aria-label="주 메뉴"><a href="#projects">프로젝트</a><a href="#about">소개·이력</a><a href="./community.html">커뮤니티</a><a href="#contact">연락</a></nav>
+  </div></header>
+  <main id="main" class="wrap">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">SEOYOUNG YOON · PORTFOLIO</p>
+        <h1>안녕하세요,<br><em>윤서영</em>입니다.</h1>
+        <p class="intro">필요한 정보를 쉽게 찾고, 다음 행동으로 자연스럽게 이어지는 웹 화면을 만듭니다.</p>
+        <div class="actions"><a class="button primary" href="#projects">프로젝트 보기</a><a class="button secondary" href="#about">소개·이력 보기</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><span class="spark">✳</span><span class="art-type">S<span>Y</span></span><span class="art-caption">SEOYOUNG<br>YOON</span></div>
+    </section>
+    <section id="projects" class="section">
+      <div class="section-head"><div><p class="eyebrow">PROJECTS</p><h2>프로젝트</h2></div><p>구현한 작업과 포트폴리오 구성 예시</p></div>
+      <div class="project-grid">
+        <article class="card"><div class="cover cover-blue" aria-hidden="true"><div class="mock mock-site"><i></i><b></b><span></span><span></span><span></span></div></div><div class="card-body"><p class="tag">구현 프로젝트 · 웹사이트</p><h3>포트폴리오 웹사이트</h3><p>작업과 소개를 한곳에 모아 채용 담당자가 필요한 내용을 빠르게 확인할 수 있게 구성했습니다.</p><button class="text-button" data-project="portfolio">상세 보기</button></div></article>
+        <article class="card"><div class="cover cover-mint" aria-hidden="true"><div class="mock mock-board"><i></i><b></b><span></span><span></span><span></span></div></div><div class="card-body"><p class="tag">구현 프로젝트 · 게시판</p><h3>고객 커뮤니티</h3><p>프로젝트 질문, 사용 후기, 개선 제안을 분류하고 글과 댓글로 대화할 수 있는 화면입니다.</p><button class="text-button" data-project="community">상세 보기</button></div></article>
+        <article class="card"><div class="cover cover-peach" aria-hidden="true"><div class="mock mock-form"><i></i><b></b><span></span><span></span><span></span></div></div><div class="card-body"><p class="tag">기획 예시 · 사용자 흐름</p><h3>문의 접수 화면</h3><p>문의 유형에 맞는 항목을 보여 주고 제출 결과를 안내하는 화면 기획 예시입니다.</p><button class="text-button" data-project="inquiry">상세 보기</button></div></article>
+      </div>
+    </section>
+    <section id="about" class="section about"><div><p class="eyebrow">ABOUT</p><h2>소개·이력</h2></div><div><h3>정보 구조부터 상호작용까지</h3><p>이 사이트에서는 프로젝트 정보 구조, 모바일 레이아웃, 게시판 검색과 글쓰기 흐름을 구현했습니다.</p><ul class="pills"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>반응형 레이아웃</li></ul><p class="muted">경력·교육·자격과 이력서 파일은 실제 정보를 받으면 추가할 수 있습니다.</p></div></section>
+    <section id="contact" class="section contact"><div><p class="eyebrow">CONTACT</p><h2>연락</h2><p>프로젝트 질문이나 피드백은 고객 커뮤니티에 남겨 주세요. 채용·협업 이메일은 준비 중입니다.</p></div><a class="button primary" href="./community.html">커뮤니티 열기</a></section>
+  </main>
+  <footer class="wrap footer"><span>© 윤서영</span><a href="#main">맨 위로</a></footer>
+  <dialog id="project-dialog" aria-labelledby="project-title"><form method="dialog"><button class="button secondary close">닫기</button></form><div id="project-content"></div></dialog>
+</body>
+</html>

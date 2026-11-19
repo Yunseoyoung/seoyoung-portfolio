@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="윤서영 포트폴리오의 프로젝트 Q&A, 후기, 개선 제안 게시판">
+  <title>고객 커뮤니티 | 윤서영</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./community.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="top"><div class="wrap bar">
+    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">SY</span> 윤서영</a>
+    <nav aria-label="주 메뉴"><a href="./index.html#projects">프로젝트</a><a href="./index.html#about">소개·이력</a><a href="./community.html" aria-current="page">커뮤니티</a><a href="./index.html#contact">연락</a></nav>
+  </div></header>
+  <main id="main" class="wrap">
+    <section class="board-intro"><p class="eyebrow">COMMUNITY</p><h1>고객 커뮤니티</h1><p>프로젝트에 대한 질문, 사용 후기, 개선 아이디어를 남겨 주세요.</p></section>
+    <section class="board" aria-label="게시판">
+      <aside class="notice"><strong>이용 안내</strong><span id="storage-note">게시판 연결을 확인하고 있습니다.</span></aside>
+      <div class="board-tools">
+        <div class="filters" aria-label="게시글 분류"><button type="button" data-filter="" aria-pressed="true">전체</button><button type="button" data-filter="question" aria-pressed="false">프로젝트 Q&amp;A</button><button type="button" data-filter="review" aria-pressed="false">사용 후기</button><button type="button" data-filter="suggestion" aria-pressed="false">개선 제안</button></div>
+        <button id="write" class="button primary" type="button">글쓰기</button>
+      </div>
+      <label class="search">제목 검색<input id="search" type="search" placeholder="검색어 입력"></label>
+      <p id="board-status" class="muted" role="status"></p>
+      <div id="post-list" class="post-list"></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>© 윤서영</span><a href="./index.html">포트폴리오 홈</a></footer>
+  <dialog id="write-dialog" aria-labelledby="write-title">
+    <form id="post-form" class="entry-form">
+      <div class="dialog-heading"><h2 id="write-title">게시글 작성</h2><button type="button" class="button secondary" data-close>닫기</button></div>
+      <label>분류<select name="category" required><option value="question">프로젝트 Q&amp;A</option><option value="review">사용 후기</option><option value="suggestion">개선 제안</option></select></label>
+      <label>관련 프로젝트<select name="project"><option value="">선택 안 함</option><option>포트폴리오 웹사이트</option><option>고객 커뮤니티</option><option>문의 접수 화면</option></select></label>
+      <label>표시 이름<input name="author" required maxlength="30"></label>
+      <label>제목<input name="title" required maxlength="100"></label>
+      <label>내용<textarea name="body" rows="5" required maxlength="2000"></textarea></label>
+      <p class="muted">이메일, 전화번호 등 개인정보는 입력하지 마세요.</p>
+      <p class="form-status" role="status"></p><button class="button primary">게시글 등록</button>
+    </form>
+  </dialog>
+  <dialog id="detail-dialog" aria-label="게시글 상세">
+    <div class="dialog-heading"><p id="detail-category" class="eyebrow"></p><button type="button" class="button secondary" data-close>닫기</button></div>
+    <h2 id="detail-title"></h2><p id="detail-meta" class="muted"></p><p id="detail-body" class="post-body"></p>
+    <h3>댓글</h3><div id="comment-list"></div>
+    <form id="comment-form" class="entry-form">
+      <label>표시 이름<input name="author" required maxlength="30"></label>
+      <label>댓글<textarea name="body" required rows="3" maxlength="1000"></textarea></label>
+      <p class="form-status" role="status"></p><button class="button primary">댓글 등록</button>
+    </form>
+  </dialog>
+</body>
+</html>
